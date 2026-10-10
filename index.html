@@ -176,10 +176,16 @@
         <label for="distCount">عدد مرات التوزيع السنوي</label>
         <input type="number" id="distCount" min="1" max="365" placeholder="مثال: 4">
       </div>
-      <div class="field">
-        <label for="noticeNote">ملاحظات إضافية (اختياري)</label>
-        <textarea id="noticeNote" placeholder="أي تفاصيل إضافية تود إضافتها"></textarea>
-      </div>
+     <!-- حاوية العنصر (ستختفي تلقائياً إذا لم يكتب فيها شيء) -->
+<div id="dynamicFieldContainer" class="optional-box" style="display: none;">
+    <label for="stockInfoInput">تفاصيل إضافية:</label>
+    <input type="text" id="stockInfoInput" list="presetOptions" placeholder="اختر أو اكتب النص هنا...">
+    
+    <!-- قائمة الخيارات المنسدلة المتاحة للاختيار أو التعديل -->
+    <datalist id="presetOptions">
+        <option value="نسبة العائد السنوي من التوزيعات حسب سعر آخر إغلاق">
+    </datalist>
+</div>
 
       <h2 style="margin-top:22px;">سجل الإشعارات (Excel)</h2>
       <div class="status-box" id="logStatus">لم يتم ربط ملف بعد. كل إشعار "تُنزّله" يُسجَّل تلقائيًا في سجل هذه الجلسة، ويمكنك تصديره كإكسل في أي وقت.</div>
